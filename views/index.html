@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>vue-demo</title>
+  <title>cf-website</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
     <script src="//cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
@@ -17,12 +17,12 @@
                         {
                             name : 'blog',
                             content : 'A blog based on hexo and github ',
-                            url : 'blog.improvecfan.cn'
+                            url : '<a href="blog">blog.improvecfan.cn</a>'
                         },
                         {
                             name : 'vue-demo',
                             content : 'some demos for vue study',
-                            url : 'www.improvecfan.cn:8089'
+                            url : '<a href="vuedemo">www.improvecfan.cn:8089</a>'
                         }
                     ]
                 }
@@ -48,7 +48,7 @@
                  <td>{{index+1}}</td>
                  <td>{{item.name}}</td>
                  <td>{{item.content}}</td>
-                 <td><a href="{{item.url}}">{{item.url}}</a></td>
+                 <td v-html="item.url"></td>
              </tr>
          </table>
 
