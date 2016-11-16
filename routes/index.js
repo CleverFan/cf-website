@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/vuedemo', function(req, res, next) {
   res.writeHead(302,{
-    'Location':'www.improvecfan.cn:8089'
+    'Location':'http://www.improvecfan.cn:8089'
   });
   res.end();
 });
