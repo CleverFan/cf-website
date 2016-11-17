@@ -1,8 +1,216 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@charset "utf-8";
+* {
+  /* Reset Style to keep browsers from imposing another setting. */
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-a {
-  color: #00B7FF;
+body {
+  background-color: #ecf1cb;
+}
+
+img,
+object,
+embed,
+video {
+  max-width: 100%;
+}
+
+.gridContainer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 87.36%;
+  padding-left: 1.82%;
+  padding-right: 1.82%;
+}
+
+#Wrapper {
+  clear: both;
+  float: left;
+  margin-left: 0;
+  width: 100%;
+  display: block;
+}
+
+
+/*Parallax Header*/
+
+h1.maintitle {
+  text-align: center;
+  font-size: 300%;
+  color: #ffffff;
+  letter-spacing: 1%;
+  margin: 0 0;
+  background: url("../images/3.jpg") fixed 100% ;
+  padding-top: 25%;
+  padding-bottom: 25%;
+  -webkit-animation: fadein 3s;
+  /*fade in animation for the Header just to add drama*/
+  -moz-animation: fadein 3s;
+  -ms-animation: fadein 3s;
+  -o-animation: fadein 3s;
+  animation: fadein 3s;
+}
+h2.blog-title{
+   background: url("../images/1.jpg") fixed 100%;
+   padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+h2.vue-title{
+   background: url("../images/2.jpg") fixed 100%;
+   padding-top: 10%;
+  padding-bottom: 10%;
+}
+h2.joke-title{
+   background: url("../images/4.jpg") fixed 100%;
+   padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+a.github-blog{
+  width: 100%;
+  margin-left: 200px;
+}
+a.csdn-blog{
+  float: right;
+  margin-right: 200px;
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/*Section Two*/
+
+.parallax-section-two {
+  padding-top: 20%;
+  padding-bottom: 20%;
+  background-color: #ffffff;
+}
+
+.parallax-section-two h3 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #3a3e2d;
+  letter-spacing: 1%;
+}
+
+.parallax-section-two p {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color: #000000;
+  letter-spacing: 1%;
+  padding: 10px;
+}
+
+
+/*Parallax Effect*/
+
+.parallax {
+  background-color: #3a3e2d;
+}
+
+
+/*Parallax Section One*/
+
+.parallax-content {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.parallax-content h2
+/*Section One Style*/
+{
+  text-align: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 275%;
+  color: #ffffff;
+  letter-spacing: 1%;
+}
+
+.parallax-content p
+/*Section One Paragraph*/
+
+{
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  color: #ffffff;
+  padding: 10px;
+}
+
+
+/*Footer Section*/
+
+.parallax-footer {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.parallax-footer p
+/*Section One and Footer Paragraph*/
+
+{
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  text-align: Center;
+  color: #ffffff;
+  padding: 10px;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+  .gridContainer {
+    width: 90.675%;
+    padding-left: 1.1625%;
+    padding-right: 1.1625%;
+  }
+  #Wrapper {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+  }
+}
+
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+  .gridContainer {
+    width: 88.2%;
+    max-width: 1232px;
+    padding-left: 0.9%;
+    padding-right: 0.9%;
+    margin: auto;
+  }
+  #Wrapper {
+    clear: both;
+    float: left;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+  }
 }

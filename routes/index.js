@@ -14,9 +14,23 @@ router.get('/vuedemo', function(req, res, next) {
 });
 
 
-router.get('/blog', function(req, res, next) {
+router.get('/githubblog', function(req, res, next) {
   res.writeHead(302,{
     'Location':'http://blog.improvecfan.cn'
+  });
+  res.end();
+});
+
+router.get('/csdnblog', function(req, res, next) {
+  res.writeHead(302,{
+    'Location':'http://blog.csdn.net/qq_31655965'
+  });
+  res.end();
+});
+
+router.get('/github', function(req, res, next) {
+  res.writeHead(302,{
+    'Location':'https://github.com/CleverFan'
   });
   res.end();
 });
