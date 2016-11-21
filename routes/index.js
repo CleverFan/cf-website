@@ -35,6 +35,13 @@ router.get('/github', function(req, res, next) {
   res.end();
 });
 
+router.get('/upload', function(req, res, next) {
+  res.writeHead(302,{
+    'Location':'http://www.improvecfan.cn:8082'
+  });
+  res.end();
+});
+
 router.get('/hunao', function(req, res, next) {
   res.writeHead(302,{
     'Location':'http://www.improvecfan.cn:3000'
