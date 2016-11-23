@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var url = require('../config').url;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -8,7 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/vuedemo', function(req, res, next) {
   res.writeHead(302,{
-    'Location':'http://www.improvecfan.cn:8089'
+    'Location': url.vuedemo
   });
   res.end();
 });
@@ -16,35 +17,43 @@ router.get('/vuedemo', function(req, res, next) {
 
 router.get('/githubblog', function(req, res, next) {
   res.writeHead(302,{
-    'Location':'http://blog.improvecfan.cn'
+    'Location': url.githubblog
   });
   res.end();
 });
 
 router.get('/csdnblog', function(req, res, next) {
   res.writeHead(302,{
-    'Location':'http://blog.csdn.net/qq_31655965'
+    'Location':url.csdnblog
+  });
+  res.end();
+});
+
+
+router.get('/nodejs', function(req, res, next) {
+  res.writeHead(302,{
+    'Location':url.nodejs
   });
   res.end();
 });
 
 router.get('/github', function(req, res, next) {
   res.writeHead(302,{
-    'Location':'https://github.com/CleverFan'
+    'Location':url.github
   });
   res.end();
 });
 
 router.get('/upload', function(req, res, next) {
   res.writeHead(302,{
-    'Location':'http://www.improvecfan.cn:8082'
+    'Location':url.upload
   });
   res.end();
 });
 
 router.get('/hunao', function(req, res, next) {
   res.writeHead(302,{
-    'Location':'http://www.improvecfan.cn:3000'
+    'Location':url.hunao
   });
   res.end();
 });

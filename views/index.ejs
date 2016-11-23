@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>cf-website</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/htmleaf-demo.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <!--[if IE]>
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="gridContainer clearfix" id="app">
+    <div id="Wrapper">
+        <header class="htmleaf-header">
+            <h1 class="maintitle">welcome to cleverfan website <span>An improving college student</span><span>please visit by computer!!</span></h1>
+            <div class="htmleaf-links">
+                <a class="htmleaf-icon icon-htmleaf-home-outline" href="github" title="github主页" target="_blank"><span> github</span></a>
+                <a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="csdnblog" title="blog" target="_blank"><span> csdn blog</span></a>
+            </div>
+        </header>
+
+        <div v-for="item in info">
+            <section class="parallax">
+                <div class="parallax-content">
+                    <h2 v-bind:class="item.className">{{item.title}}<br><span>{{item.span}}</span></h2>
+                    <div v-html="item.html"></div>
+                </div>
+            </section>
+
+
+
+        </div>
+
+        <section class="parallax">
+            <div class="parallax-footer">
+                <p>
+                    <!-- In ultricies tristique | erat eu interdum | Fusce convallis elit vitae | quam laoreet eleifend <br/><br/> | Nam eu tellus et mauris | pulvinar pharetra a tellus | Etiam sit amet facilisis | sit amet porttitor sem | Integer blandit bibendum massa -->
+                    <br/><br/>WELCOME TO CONTACE ME | STUDY AND IMPROVE
+                    <br/>
+                    <br/> CLEVERRFAN FOOTER COPY 2016
+                </p>
+            </div>
+        </section>
+
+
+    </div>
+</div>
+
+
+<script src="//cdn.bootcss.com/vue/2.0.6/vue.min.js"></script>
+<script>
+    window.onload = function () {
+        new Vue ({
+            el : '#app',
+            data : {
+                info : [
+                    {
+                        title : 'My blog ',
+                        span : 'include github and csdn',
+                        className : 'blog-title',
+                        html : '<p>In this website , i will open source my code about vue</p> <p>It contains simple demo and complex demo</p> <p>It is a pity that the update time is uncertain</p> <br> <a class="github-blog" href="vuedemo">click to look</a><a class="csdn-blog" href="csdnblog">click to visit csdn blog</a>'
+                    },
+                    {
+                        title : 'vue-demo',
+                        span : 'some demos for vue study',
+                        className : 'vue-title',
+                        html : '<p>In this website , i will open source my code about vue</p>'
+                                +'<p>It contains simple demo and complex demo</p>'
+                                +'<p>It is a pity that the update time is uncertain</p>'
+                                +'<br>'
+                                +'<a class="github-blog" href="vuedemo">click to look</a>'
+                    },
+                    {
+                        title : 'nodejs demo',
+                        span : 'some demos for nodejs ',
+                        className : 'node-title',
+                        html : '<p>i will share some demos for nodejs at here</p>' +
+                        '<a href="nodejs">click to see</a>'
+                    },
+                    {
+                        title : 'homework-upload',
+                        span : 'for accept homework',
+                        className : 'upload-title',
+                        html : '<a  href="upload">click to look</a>'
+                    },
+
+
+                ]
+            }
+        })
+    }
+</script>
+</body>
+</html>

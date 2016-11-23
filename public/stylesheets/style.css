@@ -69,6 +69,12 @@ h2.upload-title{
   padding-top: 10%;
   padding-bottom: 10%;
 }
+
+h2.node-title{
+  background: url("../images/6.jpg") fixed 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
 h2.joke-title{
    background: url("../images/4.jpg") fixed 100%;
    padding-top: 10%;
